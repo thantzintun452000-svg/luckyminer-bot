@@ -1,8 +1,8 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-# BotFather ကယူထားတဲ့ token ထည့်ပါ
-TOKEN = "YOUR_BOT_TOKEN_HERE"
+# BotFather ကရထားတဲ့ token ထည့်ပြီးသား
+TOKEN = "8401563933:AAHg8-cST_r4W1HHxSHUpHjZacz9WdtVVlA"
 
 # /start command handler
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -12,6 +12,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = Application.builder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
+
+    print("✅ Bot is running...")
     app.run_polling()
 
 if __name__ == "__main__":
